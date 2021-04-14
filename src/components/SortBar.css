@@ -1,0 +1,41 @@
+.sort-cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-grow: 1;
+  padding: 6px;
+}
+.sort-left,
+.sort-right {
+  display: flex;
+}
+.view-btn {
+  width: 130px;
+  min-width: 80px;
+  background: #64c796;
+  border: none;
+  color: white;
+  margin-left: 2px;
+  height: 96%;
+  font-size: 1rem;
+  padding: 4px;
+  outline: none;
+}
+.view-btns {
+  width: 262px;
+  min-width: 161px;
+  background: #64c796;
+  border: none;
+  color: white;
+  margin-left: 2px;
+  height: 96%;
+  font-size: 1rem;
+  padding: 4px;
+  outline: none;
+}
+.view-btn:hover {
+  background: #3b9467;
+  border-radius: 2px;
+  color: white;
+}

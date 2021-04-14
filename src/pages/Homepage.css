@@ -1,0 +1,38 @@
+.home-container {
+  width: 80%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: solid #333 1px;
+}
+.home-link {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #64c796;
+  padding: 36px;
+  border-radius: 4px;
+  color: rgb(252, 247, 247);
+  margin-bottom: 20px;
+}
+.home-link:hover {
+  color: #333;
+}
+.home-img {
+  width: 40%;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+@media (max-width: 512px) {
+  .home-container {
+    width: 92%;
+  }
+  .home-img {
+    width: 70%;
+  }
+}
