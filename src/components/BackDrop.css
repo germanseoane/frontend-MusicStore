@@ -19,3 +19,8 @@
 .message-link {
   text-decoration: none;
 }
+@media (max-width: 624px) {
+  .message {
+    font-size: 1.4rem;
+  }
+}

@@ -22,9 +22,9 @@ const initialState = {
 };
 
 const AppProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   const [active, setActive] = useState(false);
   const [api, setApi] = useState("guitars");
-  const [state, dispatch] = useReducer(reducer, initialState);
   const [back, setBack] = useState(false);
   const [alert, setAlert] = useState(false);
 
@@ -44,7 +44,6 @@ const AppProvider = ({ children }) => {
       type: ADD_TO_CART,
       payload: { image, model, brand, price, qty, id, inStock },
     });
-
     setAlert(true);
     setInterval(() => {
       setAlert(false);
@@ -56,7 +55,6 @@ const AppProvider = ({ children }) => {
   const checkOut = async () => {
     if (state.cart.length === 0) {
       dispatch({ type: EMPTY_CART });
-
       setAlert(true);
       setInterval(() => {
         setAlert(false);

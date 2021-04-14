@@ -67,4 +67,7 @@
   .navbar-links {
     display: none;
   }
+  .alert {
+    font-size: 0.8rem;
+  }
 }
