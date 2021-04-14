@@ -61,7 +61,9 @@ const AppProvider = ({ children }) => {
       }, 1500);
       return;
     }
-    window.print();
+    if (window.innerWidth > 926) {
+      window.print();
+    }
     dispatch({ type: CHECKOUT });
 
     setBack(!back);

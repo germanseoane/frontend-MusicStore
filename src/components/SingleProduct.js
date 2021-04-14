@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useGlobalContext } from "../context";
 import { formatPrice } from "../reducer/constants";
 import "./SingleProduct.css";
+import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 
 const SingleProduct = () => {
   const { products, addToCart } = useGlobalContext();
@@ -46,13 +47,17 @@ const SingleProduct = () => {
         </button>
 
         <div className="qty-container">
-          More than one?
-          <input
-            type="number"
-            value={qty}
-            className="single-qty"
-            onChange={(e) => setQty(e.target.value)}
-          ></input>
+          <div> More than one?</div>
+          <BsChevronDoubleUp
+            className="icon-btn"
+            onClick={() => setQty(qty + 1)}
+          />
+          <input value={qty} className="single-qty" readOnly></input>
+
+          <BsChevronDoubleDown
+            className="icon-btn"
+            onClick={() => setQty(qty - 2)}
+          />
         </div>
       </div>
     </main>

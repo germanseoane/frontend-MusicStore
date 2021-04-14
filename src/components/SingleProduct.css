@@ -59,8 +59,19 @@
   color: #2d8b5c;
 }
 .single-qty {
-  padding: 3px;
+  padding: 13px;
   width: 40px;
   outline: none;
   color: #2d8b5c;
+  height: 36px;
+}
+.icon-btn {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.icon-btn:hover {
+  color: #0a4226;
+  font-weight: bold;
 }
