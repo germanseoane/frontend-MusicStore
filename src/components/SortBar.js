@@ -1,7 +1,12 @@
 import React from "react";
 import { useGlobalContext } from "../context";
 import "./SortBar.css";
-import { SORT_PRICE, SORT_BRAND, SORT_MODEL } from "../reducer/constants";
+import {
+  SORT_PRICE,
+  SORT_BRAND,
+  SORT_MODEL,
+  SORT_EXPENSIVE,
+} from "../reducer/constants";
 
 const SortBar = () => {
   const { setApi, handleChange } = useGlobalContext();
@@ -29,7 +34,10 @@ const SortBar = () => {
             Sort by Model
           </option>
           <option className="view-btn" value={SORT_PRICE}>
-            Sort by Price
+            Sort by Price (Cheapest)
+          </option>
+          <option className="view-btn" value={SORT_EXPENSIVE}>
+            Sort by Price (Most Expensive)
           </option>
         </select>
       </div>

@@ -2,9 +2,16 @@ import React from "react";
 import { useGlobalContext } from "../context";
 import "./CartScreen.css";
 import { formatPrice } from "../reducer/constants";
+import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 
 const CartScreen = () => {
-  const { cart, removeItem, checkOut } = useGlobalContext();
+  const {
+    cart,
+    removeItem,
+    checkOut,
+    handleCartChange,
+    handleCartChangeMin,
+  } = useGlobalContext();
 
   return (
     <main className="cart-container">
@@ -21,7 +28,18 @@ const CartScreen = () => {
           <div className="cart-item" key={id}>
             <div className="img-container">
               <img src={image} alt={brand} />
-              <p>({qty})</p>
+              <div>
+                <p style={{ color: "#3a9467" }}>
+                  <BsChevronDoubleUp onClick={() => handleCartChange(id)} />
+                </p>
+                <p className="between" style={{ color: "#3a9467" }}>
+                  ({qty})
+                </p>
+                <BsChevronDoubleDown
+                  style={{ color: "#3a9467" }}
+                  onClick={() => handleCartChangeMin(id)}
+                />
+              </div>
             </div>
 
             <h4 className="clear">{brand}</h4>

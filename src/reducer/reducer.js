@@ -4,11 +4,14 @@ import {
   GET_PRODUCTS,
   SORT_BRAND,
   SORT_PRICE,
+  SORT_EXPENSIVE,
   SORT_MODEL,
   ADD_TO_CART,
   REMOVE_ITEM,
   CHECKOUT,
   EMPTY_CART,
+  SUM_ITEM,
+  MIN_ITEM,
 } from "./constants";
 
 const reducer = (state, action) => {
@@ -29,6 +32,15 @@ const reducer = (state, action) => {
     });
     return { ...state, products: tempProducts };
   }
+  if (action.type === SORT_EXPENSIVE) {
+    let tempProducts = [];
+    let { products } = state;
+    tempProducts = products.sort((a, b) => {
+      return b.price - a.price;
+    });
+    return { ...state, products: tempProducts };
+  }
+
   if (action.type === SORT_BRAND) {
     let tempProducts = [];
     let { products } = state;
@@ -72,6 +84,29 @@ const reducer = (state, action) => {
   }
   if (action.type === EMPTY_CART) {
     return { ...state, message: "Your cart is empty!" };
+  }
+  if (action.type === SUM_ITEM) {
+    const { cart } = state;
+
+    const newCart = cart.map((guitar) => {
+      if (guitar.id === action.payload && guitar.inStock > guitar.qty) {
+        guitar.qty += 1;
+      }
+      return guitar;
+    });
+    return { ...state, cart: newCart };
+  }
+
+  if (action.type === MIN_ITEM) {
+    const { cart } = state;
+
+    const newCart = cart.map((guitar) => {
+      if (guitar.id === action.payload && guitar.qty > 1) {
+        guitar.qty = guitar.qty - 1;
+      }
+      return guitar;
+    });
+    return { ...state, cart: newCart };
   }
   return { ...state };
 };

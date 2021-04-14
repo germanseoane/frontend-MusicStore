@@ -9,6 +9,8 @@ import {
   REMOVE_ITEM,
   CHECKOUT,
   EMPTY_CART,
+  SUM_ITEM,
+  MIN_ITEM,
 } from "./reducer/constants";
 
 const Appcontext = React.createContext();
@@ -71,7 +73,13 @@ const AppProvider = ({ children }) => {
   const handleChange = (e) => {
     dispatch({ type: e });
   };
+  const handleCartChange = (id) => {
+    dispatch({ type: SUM_ITEM, payload: id });
+  };
 
+  const handleCartChangeMin = (id) => {
+    dispatch({ type: MIN_ITEM, payload: id });
+  };
   return (
     <Appcontext.Provider
       value={{
@@ -88,6 +96,8 @@ const AppProvider = ({ children }) => {
         setBack,
         alert,
         handleChange,
+        handleCartChange,
+        handleCartChangeMin,
       }}
     >
       {children}
