@@ -18,7 +18,7 @@ const AboutScreen = () => {
         src="https://www.spottedbylocals.com/cologne/files/music-store-cologne-by-stephan-wehrle.jpg"
         alt=""
       ></img>
-      <p style={{ color: "grey", fontSize: "0.8rem", marginTop: "4px" }}>
+      <p style={{ color: "grey", fontSize: "0.8rem", marginTop: "2px" }}>
         Built with Node and React
       </p>
     </div>
