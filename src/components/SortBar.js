@@ -34,10 +34,10 @@ const SortBar = () => {
             Sort by Model
           </option>
           <option className="view-btn" value={SORT_PRICE}>
-            Sort by Price (Cheapest)
+            Sort by Price (Lowest)
           </option>
           <option className="view-btn" value={SORT_EXPENSIVE}>
-            Sort by Price (Most Expensive)
+            Sort by Price (Highest)
           </option>
         </select>
       </div>
