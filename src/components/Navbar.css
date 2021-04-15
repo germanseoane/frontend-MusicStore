@@ -55,14 +55,13 @@
   .hamburguer-icon {
     display: inline;
     margin-top: 4px;
-    background-color: grey;
     width: 30px;
     height: 30px;
     padding: 4px;
-    border-radius: 50%;
+    color: rgb(252, 247, 247);
   }
   .hamburguer-icon:hover {
-    color: rgb(247, 239, 239);
+    color: #333;
   }
   .navbar-links {
     display: none;

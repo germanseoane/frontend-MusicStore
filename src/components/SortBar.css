@@ -39,3 +39,13 @@
   border-radius: 2px;
   color: white;
 }
+@media (max-width: 526px) {
+  .view-btn,
+  .view-btns {
+    width: 100%;
+  }
+  .sort-left,
+  .sort-right {
+    width: 100%;
+  }
+}

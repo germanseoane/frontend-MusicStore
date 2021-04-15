@@ -9,7 +9,7 @@ const SideDrawer = () => {
   return (
     <div className={active ? "sidedrawer show" : "sidedrawer"}>
       <ul className="sidedrawer-links" onClick={() => setActive(!active)}>
-        <li>
+        <li className="top-link">
           <Link to="/products">Products</Link>
         </li>
         <li>

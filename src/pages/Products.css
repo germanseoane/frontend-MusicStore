@@ -20,7 +20,7 @@
 .product {
   margin: 10px;
   width: 220px;
-  height: 300px;
+  height: 280px;
   border-bottom: 1px solid black;
 }
 .product > img {

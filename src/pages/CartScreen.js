@@ -13,6 +13,13 @@ const CartScreen = () => {
     handleCartChangeMin,
   } = useGlobalContext();
 
+  if (cart.length === 0) {
+    return (
+      <main style={{ marginLeft: "20px", marginTop: "20px" }}>
+        <h3>Your cart is empty.</h3>
+      </main>
+    );
+  }
   return (
     <main className="cart-container">
       <div className="cart-item">

@@ -22,8 +22,12 @@
 .sidedrawer-links > li {
   display: flex;
   align-items: center;
-}
 
+  border-bottom: solid 1px #333;
+}
+.top-link {
+  border-top: solid 1px #333;
+}
 .sidedrawer-links > li > a:hover {
   background: #333;
   color: #f4f4f4;

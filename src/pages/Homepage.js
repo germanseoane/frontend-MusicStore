@@ -19,7 +19,7 @@ const AboutScreen = () => {
         alt=""
       ></img>
       <p style={{ color: "grey", fontSize: "0.8rem", marginTop: "2px" }}>
-        Built with Node and React
+        Built with Express , React and MongoDB
       </p>
     </div>
   );

@@ -28,10 +28,8 @@ const ProductsScreen = () => {
             >
               <div className="product">
                 <img src={image} alt={brand} />
-                <div className="info-container">
-                  <h4>{brand}</h4>
-                  <h4>{model}</h4>
-                </div>
+                <h4>{brand}</h4>
+                <h4>Model: {model}</h4>
                 <h3 style={{ color: " #5AC18E" }}>
                   Price: {formatPrice(price)}
                 </h3>
