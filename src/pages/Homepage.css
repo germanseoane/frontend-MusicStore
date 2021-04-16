@@ -35,8 +35,11 @@
   }
 }
 
-@media (max-width: 512px) {
+@media (max-width: 624px) {
   .home-container {
+    width: 92%;
+  }
+  .home-link{
     width: 92%;
   }
   .home-img {
