@@ -10,7 +10,7 @@
 }
 .home-link {
   text-decoration: none;
-  color: #333;
+  width: 36%;
   display: flex;
   flex-direction: column;
   align-items: center;
